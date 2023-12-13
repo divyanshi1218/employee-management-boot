@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <body>
+    <div th:insert="navbar"></div>
+ <form action="show-record" method="post">
+  <table style='margin:auto;border:2px solid blue;font-size:20px;margin-top:50px' cellpadding='8px'>
+    <tr>
+     <td>Enter employee id</td>
+     <td><input type="text" name='eid' required></td>
+      <td><button>Show Record</button></td>
+    </tr>
+    <tr>
+     <td colspan="3" align="center" style='color:red' th:text="${msg}"></td>
+    </tr>
+  </table>
+ </form>
+</body>
+</html>

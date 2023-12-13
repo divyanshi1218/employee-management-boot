@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <body>
+    <div th:insert="navbar"></div>
+   <form action='update-record' method="post">
+    <table style='margin:auto;font-size:20px;width:40%;margin-top:20px;border-collapse: collapse;' border='1'>
+	  <tr style='background-color:orange;color:white;font-size:22px'>
+	   <th align="center" colspan="2">Person Details</th>
+	  </tr>
+	  <tr>
+	   <th align="left">Employee Id</th>
+	   <td><input type='text' th:value='${employee.empid}' name='empid' readonly="readonly"></td>
+	  </tr>  
+	  <tr>
+	   <th align="left">Edit employee name</th>
+	   <td><input type='text' th:value='${employee.name}' name='name'></td>
+	  </tr>
+	  <tr>
+	   <th align="left">Edit employee department</th>
+	   <td><input type='text' th:value='${employee.department}' name='department'></td>
+	  </tr>
+	  <tr>
+	   <th align="left">Edit employee salary</th>
+	   <td><input type='text' th:value='${employee.salary}' name='salary'></td>
+	  </tr>
+	  <tr>
+	   <td colspan="2" align="right">
+	    <button>Update Record</button>
+	   </td>
+	  </tr>
+	</table>
+	</form>
+  </body>
+</html>

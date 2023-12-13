@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <body>
+    <div th:insert="navbar"></div>
+ <form action="show-records">
+  <table style='margin:auto;border:2px solid blue;font-size:20px;margin-top:50px' cellpadding='8px'>
+    <tr>
+     <td>Enter employee id</td>
+     <td><select name="department" style='font-size:20px'>
+     	<option th:each="name:${dlist}" th:text="${name}"></option>
+     </select></td>
+      <td><button>Show Records</button></td>
+    </tr>
+    <tr>
+     <td colspan="3" align="center" style='color:red' th:text="${msg}"></td>
+    </tr>
+  </table>
+ </form>
+</body>
+</html>

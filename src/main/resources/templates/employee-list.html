@@ -1,0 +1,19 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <body>
+    <div th:insert="navbar"></div>
+    <div th:if="${elist.empty}" style='text-align: center;margin-top:50px'>
+        <h1 style='color:red'>Employee list is empty</h1>
+    </div>
+    <table th:if="${!elist.empty}"  style='margin:auto;font-size:20px;width:60%;margin-top:20px;border-collapse: collapse;' border='1'>
+	 <tr>
+	  <th>Employee Id</th><th>Employee name</th><th>Employee department</th><th>Employee salary</th>
+	 </tr>
+	  <tr th:each="employee:${elist}">
+	   <td th:text="${employee.empid}"></td>
+	   <td th:text="${employee.name}"></td>
+	   <td th:text="${employee.department}"></td>
+	   <td th:text="${employee.salary}"></td>
+	  </tr>
+	</table>
+  </body>
+</html>

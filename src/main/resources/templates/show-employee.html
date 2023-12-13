@@ -1,0 +1,26 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <body>
+    <div th:insert="navbar"></div>
+    <table style='margin:auto;font-size:20px;width:40%;margin-top:20px;border-collapse: collapse;' border='1'>
+	  <tr style='background-color:orange;color:white;font-size:22px'>
+	   <th align="center" colspan="2">Person Details</th>
+	  </tr>
+	  <tr>
+	   <th align="left">Employee id</th>
+	   <td th:text="${employee.empid}"></td>
+	  </tr>  
+	  <tr>
+	   <th align="left">Employee name</th>
+	   <td th:text="${employee.name}"></td>
+	  </tr>
+	  <tr>
+	   <th align="left">Employee department</th>
+	   <td th:text="${employee.department}"></td>
+	  </tr>
+	  <tr>
+	   <th align="left">Employee salary</th>
+	   <td th:text="${employee.salary}"></td>
+	  </tr>
+	</table>
+  </body>
+</html>
